@@ -1,0 +1,18 @@
+function matrix = generate_random_matrix(size, mode)
+
+    matrix = zeros(size);
+    
+    for i=1:size(1)
+        row = randsample(100, size(2));
+        if strcmp(mode,'normal')==0
+        row = row/sum(row);
+
+        matrix(i, :) = row;
+        if strcmp(mode,'zero-diag')==0
+            for i=1:N
+        transition_matrix(i,i) = 0.0;
+        transition_matrix(i,:) = transition_matrix(i,:)/sum(transition_matrix(i,:));
+    end
+            
+    end
+end
